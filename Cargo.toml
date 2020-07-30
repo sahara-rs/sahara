@@ -1,0 +1,7 @@
+[package]
+name = "sahara"
+version = "0.0.1"
+authors = ["MonliH", "Senre"]
+edition = "2018"
+
+[dependencies]
