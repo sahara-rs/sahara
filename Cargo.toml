@@ -3,5 +3,8 @@ name = "sahara"
 version = "0.0.1"
 authors = ["MonliH", "Senre"]
 edition = "2018"
+license-file = "LICENSE"
+description = " A crate for image compositing"
+repository = "https://github.com/sahara-rs/sahara"
 
 [dependencies]
