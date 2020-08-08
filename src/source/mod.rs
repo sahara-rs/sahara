@@ -5,6 +5,6 @@
 //!
 //! Sources are **always** immutable. See [`composites`](crate::composite) if you want to composite sources.
 
-mod source2d;
+mod source_2d;
 
-pub use source2d::Source2D;
+pub use source_2d::Source2D;
