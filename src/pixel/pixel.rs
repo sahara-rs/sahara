@@ -4,5 +4,11 @@
 /// as a pixel in [`sources`](crate::source).
 pub trait Pixel: Sized {
     /// Blend two pixels at a specified opacity
+    ///
+    /// If `opacity` is 0.0, the `self` parameter should be outputted.
+    ///
+    /// If `opacity` is 1.0, the `other` parameter should be outputted.
+    ///
+    /// Anything in between should blend between the two.
     fn blend(self, other: Self, opacity: f32) -> Self;
 }
