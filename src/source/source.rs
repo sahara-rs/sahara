@@ -12,14 +12,15 @@ pub trait Source2D<T>
 where
     T: pixel::Pixel + Default,
 {
-    /// Lookup a [`Pixel`](pixel::Pixel) with coordinates `x` and `y`.
+    /// Lookup a [`Pixel`](pixel::Pixel) with coordinates `row` and `col`.
+    /// The pixel at position `row: 0, col: 0` should be at the top left corner.
     ///
-    /// Bounds:
-    /// 0 <= `x` < width from `get_width`.
-    /// 0 <= `y` < height from `get_height`.
+    /// # Bounds
     ///
-    /// The pixel at position `x: 0, y: 0` should be at the top left corner.
-    fn get_pixel(&self, x: usize, y: usize) -> &T;
+    /// `0 ≤ row < height`
+    ///
+    /// `0 ≤ col < width`
+    fn get_pixel(&self, row: usize, col: usize) -> &T;
 
     /// Get the width of an image in pixels
     fn get_width(&self) -> usize;

@@ -1,6 +1,6 @@
 //! An image processing library.
 //!
-//! ## Terms
+//! # Terms
 //!
 //! | Name | Description |
 //! | ---- | ----------- |
