@@ -12,7 +12,7 @@ pub trait Source2D<T>
 where
     T: pixel::Pixel + Default,
 {
-    /// Lookup a [`Pixel`](pixel::Pixel) with coordinates `row` and `col`.
+    /// Lookup a [`Pixel`](pixel::Pixel) at location `(row, col)`.
     /// The pixel at position `row: 0, col: 0` should be at the top left corner.
     ///
     /// # Bounds
@@ -21,6 +21,13 @@ where
     ///
     /// `0 ≤ col < width`
     fn get_pixel(&self, row: usize, col: usize) -> &T;
+
+    /// Set a [`Pixel`](pixel::Pixel) at location `(row, col)`.
+    /// The pixel at position `row: 0, col: 0` should be at the top left corner.
+    ///
+    /// # Bounds
+    /// Same as [`get_pixel`](crate::source::Source2D::get_pixel)
+    fn set_pixel(&mut self, row: usize, col: usize, pixel: T);
 
     /// Get the width of an image in pixels
     fn get_width(&self) -> usize;
