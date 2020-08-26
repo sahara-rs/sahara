@@ -1,12 +1,7 @@
-//! A composite for sources. Used for image compositing.
+//! A composite is the output of a [`compositor`](crate::compositor).
 //!
-//! Composites are mutable, unlike [`sources`](crate::source).
-//! Think of a composite as a canvas: you can keep painting on it from sources until it is "done".
-//! Once a composite is "done", you can turn it back into a source!
-//! This allows for very intuitive layering and grouping.
-
-mod composite;
+//! A composite also implements the [`composable`](crate::composable) trait,
+//! meaning you can nest composites.
 mod composite_2d;
 
-pub use composite::Composite;
 pub use composite_2d::Composite2D;

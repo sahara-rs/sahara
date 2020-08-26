@@ -1,4 +1,4 @@
-//! Handling and representation of pixels in a [`source`](crate::source) object.
+//! Handling and representation of pixels in a [`source`](crate::sources) object.
 
 mod pixel;
 mod rgb_pixel;
