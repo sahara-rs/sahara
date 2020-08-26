@@ -48,9 +48,9 @@ where
     /// use sahara::source::{Source2D, Image2D};
     /// use sahara::pixel::RgbaPixel;
     ///
-    /// let bl = RgbaPixel::from((0, 0, 0, 255)); // Black pixel
-    /// let r = RgbaPixel::from((255, 0, 0, 255)); // Red pixel
-    /// let g = RgbaPixel::from((0, 255, 0, 255)); // green pixel
+    /// let bl = RgbaPixel::new(0, 0, 0, 255);  // Black pixel
+    /// let r = RgbaPixel::new(255, 0, 0, 255); // Red pixel
+    /// let g = RgbaPixel::new(0, 255, 0, 255); // Green pixel
     /// let image_2d: Image2D<RgbaPixel> = Image2D::new(vec![bl, r, g, r], 2, 2); // Create a 2 by 2 image
     ///
     /// assert_eq!(image_2d.get_pixel(0, 0), &bl); // Top left corner
@@ -69,7 +69,7 @@ where
     /// use sahara::source::{Source2D, Image2D};
     /// use sahara::pixel::RgbaPixel;
     ///
-    /// let b = RgbaPixel::from((0, 0, 0, 255)); // Black Pixel
+    /// let b = RgbaPixel::new(0, 0, 0, 255); // Black Pixel
     /// let image: Image2D<RgbaPixel> = Image2D::new(vec![b, b, b, b, b, b], 2, 3);
     /// assert_eq!(image.get_height(), 3);
     /// ```

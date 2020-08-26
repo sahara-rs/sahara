@@ -17,9 +17,9 @@ impl RgbaPixel {
 }
 
 impl Pixel for RgbaPixel {
-    fn blend(self, other: Self, opacity: f32) -> Self {
+    fn blend(&self, other: &Self, opacity: f32) -> Self {
         // Blend rbg pixels together
-        self
+        *self
     }
 }
 
