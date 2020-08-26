@@ -1,7 +1,7 @@
 /// A type that can be treated as a pixel.
 ///
 /// Types implementing `Pixel` are able to be used
-/// as a pixel in [`sources`](crate::sources) and [`composable`](crate::composable)'s.
+/// as a pixel in [`source`](crate::source)s and [`surface`](crate::surface)s.
 pub trait Pixel: Sized {
     /// Blend two pixels at a specified opacity
     ///
