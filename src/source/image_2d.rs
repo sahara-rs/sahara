@@ -38,7 +38,7 @@ where
                 pixels,
                 width,
                 height,
-                _phantom: PhantomData
+                _phantom: PhantomData,
             })
         } else {
             None
@@ -151,7 +151,10 @@ mod source_2d_test {
 
     #[test]
     fn dim_test() {
-        assert_eq!(None, Image2D::<RgbaPixel, Vec<RgbaPixel>>::new(vec![], 0, 0));
+        assert_eq!(
+            None,
+            Image2D::<RgbaPixel, Vec<RgbaPixel>>::new(vec![], 0, 0)
+        );
     }
 
     #[test]

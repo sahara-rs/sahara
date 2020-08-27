@@ -33,4 +33,3 @@ impl From<(u8, u8, u8, u8)> for RgbaPixel {
         }
     }
 }
-

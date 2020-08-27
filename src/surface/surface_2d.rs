@@ -1,2 +1,2 @@
-/// A 2D surface. 
+/// A 2D surface.
 pub struct Surface2D {}
