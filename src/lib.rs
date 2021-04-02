@@ -9,7 +9,11 @@
 //! | [`compositor`](crate::compositor) | A compositor is responsible for combining/compositing types implementing [`source`](crate::source). Compositors output [`surface`](crate::surface)s on command.
 
 #![deny(missing_docs, missing_crate_level_docs)]
-#![warn(rust_2018_idioms)]
+#![warn(
+    rust_2018_idioms,
+    missing_debug_implementations,
+    missing_copy_implementations
+)]
 
 pub mod compositor;
 pub mod pixel;
